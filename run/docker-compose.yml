@@ -6,4 +6,4 @@ elasticsearch:
        - 9300:9300
   environment:
        TZ : "Asia/Shanghai"
-       cluster.name: sn-cluster
+       cluster.name: test-cluster
