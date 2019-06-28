@@ -1,0 +1,34 @@
+SELECT
+    id ,
+    create_at,
+    deleted,
+    device_inner_ip,
+    device_mac,
+    device_name,
+    device_option,
+    device_outer_ip,
+    device_type,
+    device_version,
+    distribute_status,
+    gateway_id,
+    status,
+    update_at,
+    user_id,
+    node_num,
+    electric_quantity,
+    electricity_status,
+    gate_open_status,
+    inner_humidity,
+    inner_temperature,
+    man_in_out_status,
+    on_off_status,
+    outer_humidity,
+    outer_temperature,
+    show_text,
+    work_percent,
+    on_off_line_status,
+    parent_id
+FROM
+    device
+WHERE
+    update_at >=date_add(:sql_last_value,interval 8 hour)

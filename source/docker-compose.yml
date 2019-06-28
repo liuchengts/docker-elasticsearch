@@ -1,0 +1,10 @@
+elasticsearch:
+  container_name: elasticsearch
+  build: docker
+  restart: always
+  ports:
+       - 9200:9200
+       - 9300:9300
+  environment:
+       TZ : "Asia/Shanghai"
+       cluster.name: sn-cluster
