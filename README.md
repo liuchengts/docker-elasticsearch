@@ -14,7 +14,7 @@ sysctl -w vm.max_map_count=262144
 ## 启动elasticsearch
 * 直接使用镜像
 ```
-docker run -p 9200:9200 -p 9300:9300 -d registry.cn-hangzhou.aliyuncs.com/lcts/elasticsearch-server:latest --name=es
+docker run  --name=es -p 9200:9200 -p 9300:9300 -d registry.cn-hangzhou.aliyuncs.com/lcts/elasticsearch-server:latest
 ```
 * 最简单的启动方式( 对应 run 文件夹)
 ```
