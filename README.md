@@ -1,7 +1,21 @@
 # docker-elasticsearch
 
 # 使用步骤
+## 注意 
+* 因为默认es启动内存默认配置为2g(这个值可以手动修改)   因此docker内存必须设置为容器内存最大值为2g
+宿主机执行 
+ ``` 
+ vi /etc/sysctl.conf 增加  vm.max_map_count=262144 
+ ```
+或者执行 
+```
+sysctl -w vm.max_map_count=262144
+```
 ## 启动elasticsearch
+* 直接使用镜像
+```
+docker run -p 9200:9200 -p 9300:9300 -d registry.cn-hangzhou.aliyuncs.com/lcts/elasticsearch-server:latest --name=es
+```
 * 最简单的启动方式( 对应 run 文件夹)
 ```
  docker-compose up -d -f run/docker-compose.yml
