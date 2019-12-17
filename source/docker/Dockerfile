@@ -1,6 +1,6 @@
 FROM elasticsearch:5.0.2
 COPY config/elasticsearch.yml /usr/share/elasticsearch/config/
-RUN apt-get install wget tar unzip
+RUN apt-get install wget tar unzip \
     && bin/elasticsearch-plugin install analysis-icu \
     && wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.1.tar.gz \
     && tar -zxvf logstash-5.2.1.tar.gz \
