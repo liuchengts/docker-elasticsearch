@@ -1,9 +1,0 @@
-headPlugin:
-  image: mobz/elasticsearch-head:5
-  container_name: elasticsearch-head
-  restart: always
-  ports:
-       - 9100:9100
-  networks: elastic-networks
-  environment:
-       TZ : "Asia/Shanghai"

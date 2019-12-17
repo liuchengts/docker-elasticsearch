@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-docker network create elastic-networks
-echo '网络创建完成 networks: elastic-networks'
+echo 'vm.max_map_count=262144 ' >> /etc/sysctl.conf
+sysctl -w vm.max_map_count=262144
