@@ -5,6 +5,7 @@ elasticsearch:
   ports:
        - 9200:9200
        - 9300:9300
+  networks: elastic-networks
   environment:
        TZ : "Asia/Shanghai"
        cluster.name: test-cluster
