@@ -1,12 +1,9 @@
-version: '2.1'
-services:
-  logstash:
-    image: docker.elastic.co/logstash/logstash:7.5.0
-    container_name: logstash
-    restart: always
-    ports:
-       - 5601:5601
-    networks:
-       - elasticsearch_elastic
-    environment:
-         TZ : "Asia/Shanghai"
+logstash:
+  image: docker.elastic.co/logstash/logstash:7.5.0
+  container_name: logstash
+  restart: always
+  ports:
+    - 5044:5044
+    - 9600:9600
+  environment:
+    - "TZ=Asia/Shanghai"

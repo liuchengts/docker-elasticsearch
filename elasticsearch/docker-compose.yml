@@ -5,7 +5,7 @@ services:
     container_name: es01
     restart: always
     environment:
-      - TZ="Asia/Shanghai"
+      - "TZ=Asia/Shanghai"
       - node.name=es01
       - cluster.name=es-docker-cluster
       - discovery.seed_hosts=es02,es03
@@ -28,7 +28,7 @@ services:
     container_name: es02
     restart: always
     environment:
-      - TZ="Asia/Shanghai"
+      - "TZ=Asia/Shanghai"
       - node.name=es02
       - cluster.name=es-docker-cluster
       - discovery.seed_hosts=es01,es03
@@ -48,7 +48,7 @@ services:
     container_name: es03
     restart: always
     environment:
-      - TZ="Asia/Shanghai"
+      - "TZ=Asia/Shanghai"
       - node.name=es03
       - cluster.name=es-docker-cluster
       - discovery.seed_hosts=es01,es02
@@ -63,7 +63,6 @@ services:
       - data03:/usr/share/elasticsearch/data
     networks:
       - elastic
-
 volumes:
   data01:
     driver: local

@@ -1,13 +1,9 @@
-version: '2.2'
-services:
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.5.0
-    container_name: kibana
-    restart: always
-    ports:
-        - 5601:5601
-    environment:
-         TZ : "Asia/Shanghai"
-networks:
-  elastic:
-    driver: bridge
+kibana:
+  image: docker.elastic.co/kibana/kibana:7.5.0
+  container_name: kibana
+  restart: always
+  ports:
+    - 5601:5601
+  environment:
+    - "TZ=Asia/Shanghai"
+
