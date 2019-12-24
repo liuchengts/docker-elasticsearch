@@ -1,6 +1,5 @@
-logstash:
-  image: docker.elastic.co/logstash/logstash:7.5.0
-  container_name: logstash
+container_name: logstash
+  build: docker
   restart: always
   ports:
     - 5044:5044

@@ -17,7 +17,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - data01:/usr/share/elasticsearch/data
+      - /Users/liucheng/dockerVolumes/es01:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
       - 9300:9300
@@ -40,7 +40,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - data02:/usr/share/elasticsearch/data
+      - /Users/liucheng/dockerVolumes/es02:/usr/share/elasticsearch/data
     networks:
       - elastic
   es03:
@@ -60,7 +60,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - data03:/usr/share/elasticsearch/data
+      - /Users/liucheng/dockerVolumes/es03:/usr/share/elasticsearch/data
     networks:
       - elastic
 volumes:
